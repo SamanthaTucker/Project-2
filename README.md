@@ -1,6 +1,6 @@
 # Vacation Planner
 
-** Problem: **
+**Problem: 
 - Users don't have a vacation planner app/ physical planner to organize their vacations.
 - The users can use this app to plan out vacations/small trips to help organize their budget, location, hotels, dates, and what to pack.
 - Overall this app can provide an organised list for users to input and edit to get excited for their vacations!
