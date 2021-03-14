@@ -1,6 +1,10 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT
+
+const session = require('express-session')
 
 
 //Set Up Database
@@ -11,7 +15,8 @@ const methodOverride = require('method-override')
 
 app.use(methodOverride('_method'))
 
-const mongoURI = 'mongod://127.0.0.1:27017/' // not finished ??
+//Database
+const mongoURI = process.env.MONGODBURI
 
 const db = mongoose.connection
 
