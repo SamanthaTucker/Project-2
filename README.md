@@ -2,7 +2,7 @@
 
 **Problem:** 
 - Users don't have a vacation planner app/ physical planner to organize their vacations.
-- The users can use this app to plan out vacations/small trips to help organize their budget, location, hotels, dates, and what to pack.
+- The users can use this app to plan out vacations/small trips to help organize their budget, location, hotels, dates, and travel notes.
 - Overall this app can provide an organised list for users to input and edit to get excited for their vacations!
 
 **User Stories:**
@@ -14,6 +14,7 @@ As a user, I should be able to...
 - Delete my account If I want to
 - See clearly where to input my items to create a planner for each vacation I want.
 - Save my progress to my home page at any time.
+- Have an option to add my vacation experience as more Travel Notes, almost like a blog.
 
 **Who Would Use This?** 
 - Vacation planners
@@ -21,8 +22,14 @@ As a user, I should be able to...
 - People who enjoy planning vacations
 - Frequent Travelers
 - Big family vacationers
+- Bloggers
 
-# Wireframe 
+## Routes:
+
+Route Name | URL | HTTP Verb | Description
+---------- | --- | --------- | -----------
+
+## Wireframe 
 
 **Main Page/ Login or Create Account:**
 
