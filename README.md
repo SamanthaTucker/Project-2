@@ -28,13 +28,13 @@ As a user, I should be able to...
 
 Route Name | URL | HTTP Verb | Description
 ---------- | --- | --------- | -----------
-Index |
-New |
-Create |
-Show |
-Edit |
-Update |
-Destroy |
+Index | /planner | GET |
+New | /planner/new | GET |
+Create | /planner | POST
+Show | /planner/:id | GET |
+Edit | /planner/:id/edit | GET |
+Update | /planner/:id | PUT |
+Destroy | /planner/:id | DELETE |
 
 ## Wireframe 
 
