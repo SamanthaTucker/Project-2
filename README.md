@@ -28,6 +28,13 @@ As a user, I should be able to...
 
 Route Name | URL | HTTP Verb | Description
 ---------- | --- | --------- | -----------
+Index |
+New |
+Create |
+Show |
+Edit |
+Update |
+Destroy |
 
 ## Wireframe 
 
