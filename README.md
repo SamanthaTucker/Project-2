@@ -29,7 +29,7 @@ As a user, I should be able to...
 Route Name | URL | HTTP Verb | Description
 ---------- | --- | --------- | -----------
 Index | /planner | GET | Main home page user will see after logging in/ creating an account
-New | /planner/new | GET |
+New | /planner/new | GET | New: will be adding locations, budget, travel notes, and day schedules.
 Create | /planner | POST
 Show | /planner/:id | GET |
 Edit | /planner/:id/edit | GET |
