@@ -28,7 +28,7 @@ As a user, I should be able to...
 
 Route Name | URL | HTTP Verb | Description
 ---------- | --- | --------- | -----------
-Index | /planner | GET |
+Index | /planner | GET | Main home page user will see after logging in/ creating an account
 New | /planner/new | GET |
 Create | /planner | POST
 Show | /planner/:id | GET |
