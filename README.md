@@ -30,7 +30,7 @@ Route Name | URL | HTTP Verb | Description
 ---------- | --- | --------- | -----------
 Index | /planner | GET | Main home page user will see after logging in/ creating an account
 New | /planner/new | GET | New: will be adding locations, budget, travel notes, and day schedules.
-Create | /planner | POST
+Create | /planner | POST | User can create a new vacation with basic Location, Budget, Number of days, to show up on index route.
 Show | /planner/:id | GET |
 Edit | /planner/:id/edit | GET |
 Update | /planner/:id | PUT |
