@@ -16,7 +16,7 @@
     <div class="navbar">
         <ul class='ul-nav'>
             <li>
-                <a class='navbar-links' href="">Home</a>
+                <a class='navbar-links' href="/planner">Home</a>
             </li>
             <li>
                 <a class='navbar-links' href="">Locations</a>
@@ -46,6 +46,14 @@
     <div class='button-div'>
         <button class='start' onclick="window.location.href='planner/new'"> Start Planning</button>
     </div>
+
+    <div class='current-vacations'>
+        <h4><%= newVacations.location %></h4>
+        <p><%= newVacations.budget %></p>
+        <p><%= newVacations.days %></p>
+
+    </div>
+
 
       <footer>
           <ul class="footer-ul">

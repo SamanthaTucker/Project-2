@@ -41,30 +41,34 @@ app.use(express.urlencoded({extended: true}))
 
 //Models:
 
-const locationsController = require('./models/locations')
+const vacation = require('./models/vacation')
 //my destinations/ Locations to be entered
 
-const budgetSchema = require('./models/budget')
-// Budget for vacations to be entered
+// const budgetSchema = require('./models/budget')
+// // Budget for vacations to be entered
 
-const scheduleSchema = require('./models/schedule')
-//Day schedule to be entered
+// const scheduleSchema = require('./models/schedule')
+// //Day schedule to be entered
 
-const notesSchema = require('./models/notes')
-//Travel notes to be entered
+// const notesSchema = require('./models/notes')
+// //Travel notes to be entered
 
 //ROUTES:
 
 // Index route
 app.get('/planner', (req, res)=>{
     console.log('Index Route is working')
-    res.render('index.ejs')
+    res.render('index.ejs', {
+        newVacations: vacation
+    })
 })
 
 // New route
 app.get('/planner/new', (req,res)=>{
     console.log('New Route is working')
-    res.render('new.ejs')
+    res.render('new.ejs', {
+        newVacations: vacation
+    })
 })
 
 //Edit Route
@@ -73,8 +77,10 @@ app.get('/planner/edit', (req,res)=>{
 })
 
 //POST Route
-app.post('/planner/new', (req, res)=>{
+app.post('/planner', (req, res)=>{
     console.log('Post is working planner/new ')
+    vacation.push(req.body)
+    res.redirect('/planner')
 })
 
 
