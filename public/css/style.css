@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E7D6DF;
+    margin: 0;
+}
+
+.header-img-div{
+    background: url("https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2017/08/pexels-photo-297755-840x549.jpeg?v=22826");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 450px;
+}
+.header-img-div-new{
+    background: url("https://wwwnc.cdc.gov/travel/images/hiker-ocean-extreme.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 450px;
+}
+.h2-div{
+    position: absolute;
+    padding-left: 25px;
+    margin: 30px;
+    
+}
+.h2-title{
+    font-family: 'Courgette', cursive;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    word-spacing: 8px;
+    width: 370px;
+}
+
+.navbar{
+    font-size: 25px;
+    padding: 15px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 70px;
+}
+
+.ul-nav{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+.ul-nav li{
+    text-align: center;
+}
+.navbar-links{
+    text-decoration: none;
+    color: white;
+}
+.navbar-links:hover{
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.new-header-div{
+    background: url('https://www.travelwithpedro.com/wp-content/uploads/2019/09/best-passports-in-the-world--1000x520.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 450px;
+}   
+.h3-div{
+    font-size: 65px;
+    font-family: 'Courgette', cursive;
+    margin: 50px;
+    text-align: center;
+    -webkit-animation: fadein 3s;
+}
+.right-h3{
+    padding-left: 165px;
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.h3-div img{
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-div{
+    text-align: center;
+    font-size: 25px;
+    margin: 45px;
+}
+
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin: 40px 40px;
+}
+.start{
+    display: inline-block;
+    padding: 20px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F2B6B6;
+    width: 30%;
+}
+.start:hover{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.new-main-h3{
+    font-size: 35px;
+    margin: 50px;
+}
+
+#new-vacation-form{
+    background-color: rgba(255, 243, 243, 0.7);
+    margin: auto;
+    padding: 55px;
+    width: 80%;
+    min-width: 300px;
+    font-size: 25px;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #cebbc8;
+}
+.tabs, .tabs p{
+    padding: 10px;
+}
+.next-div{
+    float: right;
+    padding-top: 10px;
+}
+.next-button{
+   padding: 10px;
+}
+  
+.footer{
+    position: fixed;
+    margin-top: 50px;
+    text-align: center;
+}
+.footer-ul{
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    padding: 15px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 150px;
+}

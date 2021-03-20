@@ -39,6 +39,43 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 
+//Models:
+
+const locationsController = require('./models/locations')
+//my destinations/ Locations to be entered
+
+const budgetSchema = require('./models/budget')
+// Budget for vacations to be entered
+
+const scheduleSchema = require('./models/schedule')
+//Day schedule to be entered
+
+const notesSchema = require('./models/notes')
+//Travel notes to be entered
+
+//ROUTES:
+
+// Index route
+app.get('/planner', (req, res)=>{
+    console.log('Index Route is working')
+    res.render('index.ejs')
+})
+
+// New route
+app.get('/planner/new', (req,res)=>{
+    console.log('New Route is working')
+    res.render('new.ejs')
+})
+
+//Edit Route
+app.get('/planner/edit', (req,res)=>{
+    console.log('Edit Route is working')
+})
+
+//POST Route
+app.post('/planner/new', (req, res)=>{
+    console.log('Post is working planner/new ')
+})
 
 
 
@@ -48,3 +85,4 @@ app.listen(PORT, ()=>{
 
 
 // https://expressjs.com/en/guide/using-middleware.html
+
