@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT
-
+const bodyParser = require('body-parser')
 const session = require('express-session')
 
 
@@ -14,6 +14,9 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
 app.use(methodOverride('_method'))
+
+app.use(express.json())
+
 
 //Database
 const mongoURI = process.env.MONGODBURI
@@ -36,8 +39,7 @@ db.on('disconnected', ()=> { console.log("MONGO Disconnected")})
 app.use(express.static('public'))
 
 // Parse the Data / Creates the req.body:
-app.use(express.urlencoded({extended: true}))
-
+app.use(express.urlencoded({extended: true}));
 
 //Models:
 
@@ -79,10 +81,10 @@ app.get('/planner/edit', (req,res)=>{
 //POST Route
 app.post('/planner', (req, res)=>{
     console.log('Post is working planner/new ')
+    //console.log(req.body) // So it is taking input
     vacation.push(req.body)
     res.redirect('/planner')
 })
-
 
 
 app.listen(PORT, ()=>{
