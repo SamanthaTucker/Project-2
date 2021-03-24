@@ -43,7 +43,7 @@ app.use(express.urlencoded({extended: true}));
 
 //Models:
 
-const vacation = require('./models/vacation')
+const Vacation = require('./models/vacation')
 //my destinations/ Locations to be entered
 
 // const budgetSchema = require('./models/budget')
@@ -60,17 +60,20 @@ const vacation = require('./models/vacation')
 // Index route
 app.get('/planner', (req, res)=>{
     console.log('Index Route is working')
-    res.render('index.ejs', {
-        newVacations: vacation
+    Vacation.find({}, (err, createdVacation)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            res.render('index.ejs', {newVacations: createdVacation})
+        }
     })
 })
 
 // New route
 app.get('/planner/new', (req,res)=>{
     console.log('New Route is working')
-    res.render('new.ejs', {
-        newVacations: vacation
-    })
+    res.render('new.ejs')
 })
 
 //Edit Route
@@ -82,8 +85,16 @@ app.get('/planner/edit', (req,res)=>{
 app.post('/planner', (req, res)=>{
     console.log('Post is working planner/new ')
     //console.log(req.body) // So it is taking input
-    vacation.push(req.body)
-    res.redirect('/planner')
+    Vacation.create(req.body, (err, createdVacation)=>{
+        if(err){
+            console.log(err)
+            res.send(err)
+        }
+        else{
+            console.log(createdVacation)
+            res.redirect('/planner')
+        }
+    })
 })
 
 

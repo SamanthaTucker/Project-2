@@ -1,26 +1,15 @@
-// const mongoose = require('mongoose')
-// const {Schema, model} = mongoose
+const mongoose = require('mongoose')
+const {Schema, model} = mongoose
 
 // New Vacation 
-const vacation = [
-    {
-    location: '',
-    budget: '',
-    days: Number
-}
-]
+const vacationSchema = new Schema({
+    image: {type: String},
+    location: {type: String, required: true}, 
+    budget: {type: Number, required: true},
+    days: {type: Number, required: true}
+})
 
 
-// const vacation = model('Vacation', vacationSchema)
+const Vacation = model('Vacation', vacationSchema)
 
-module.exports = vacation
-
-
-
-
-
-// const vacation = new Schema({
-//     location: {type: String, required: true}, 
-//     budget: {type: Number},
-//     days: {type: Number}
-// })
+module.exports = Vacation
