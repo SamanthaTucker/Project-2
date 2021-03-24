@@ -1,0 +1,77 @@
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>Vacation Planner Index</title>
+</head>
+<body>
+    
+    <div class='header-img-div'>
+        <!-- <img class='header-img' src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2017/08/pexels-photo-297755-840x549.jpeg?v=22826"> -->
+        
+        <div class="h2-div">
+            <h2 class='h2-title'>Serendipity: <br> (n.) finding something good without looking for it</h2>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <ul class='ul-nav'>
+            <li>
+                <a class='navbar-links' href="/planner">Home</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Locations</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Budgeting</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Day Schedules</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Travel-Notes</a>
+            </li>
+        </ul>
+      </div>
+   
+    <div class='h3-div'>
+        <h3>Adventure</h3>
+        <h3 class='right-h3'>Awaits...</h3>
+        <img src='https://q3p9g6n2.rocketcdn.me/wp-content/ml-loads/2016/05/travel-search-suitcasebeach-ss-1920.png' width='600px'>
+    </div>
+     
+    <div class='text-div'>
+       <p>Let's plan a vacation! <br> This vacation planner gives you a place to organize and write about upcoming trips. It doesn't matter where you're going or who you're traveling with, plan it here just for fun!</p>
+    </div>
+
+    <div class='button-div'>
+        <button class='start' onclick="window.location.href='planner/new'"> Start Planning</button>
+    </div>
+
+    <div class='current-vacations'>
+            <% for(let i =0; i < newVacations.length; i++) { %>
+                    <img class='vacation-image' src='<%= newVacations[i].image %>' width='500px'>
+                    <div class='vacation-info-div'>
+                        <h3 class="vacation-location" > <%= newVacations[i].location%></h4>
+                        <p class='vacation-budget'>$<%= newVacations[i].budget %> </p>    
+                        <p class='vacation-days'><%= newVacations[i].days %> Days</p> 
+                    </div>
+                    <a class='edit-btn' href='/<%= newVacations[i].id %>/edit'>Edit</a>  
+                    <div class='delete-div'>
+                        <form action="/<%= newVacations[i].id %>?_method=DELETE" method="POST">
+            
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                     </div>
+                <% } %>
+    </div>
+
+
+      <footer>
+          <ul class="footer-ul">
+              <li>Made in Denver CO &hearts;</li>
+              <li>&#169;2021 Vacation Planner</li>
+              <li>Contact Me!</li>
+          </ul>
+      </footer>
+
+</body>
+</html>

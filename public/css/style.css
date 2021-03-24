@@ -8,7 +8,7 @@ body{
     background-color: #E7D6DF;
     margin: 0;
 }
-
+/* Main Images per Index Route */
 .header-img-div{
     background: url("https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2017/08/pexels-photo-297755-840x549.jpeg?v=22826");
     background-size: cover;
@@ -23,6 +23,15 @@ body{
     min-width: 100%;
     min-height: 450px;
 }
+.header-img-div-edit{
+    background: url("https://i.dawn.com/primary/2019/06/5d02a993e2dfa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 450px;
+}
+
+/* QUOTES ON HEADER IMAGES */
 .h2-div{
     position: absolute;
     padding-left: 25px;
@@ -37,7 +46,7 @@ body{
     word-spacing: 8px;
     width: 370px;
 }
-
+/* Nav Bar */
 .navbar{
     font-size: 25px;
     padding: 15px 15px;
@@ -147,18 +156,45 @@ input {
 .next-button{
    padding: 10px;
 }
+/* USER INPUT AREA: */
 .current-vacations{
     margin: 30px;
+    text-align: center;
 }
 .vacation-info-div{
-    margin: 20px;
+    margin: 10px;
 }
 .vacation-info-div h3{
-    font-size: 30px;
+    font-size: 35px;
+}
+.vacation-budget, .vacation-days{
+    padding: 5px;
+    font-size: 20px;
 }
 .vacation-image{
-    width: 300px;
+    padding: 10px;
+    margin-top: 30px;
 }
+/*  --------------------  */
+
+/* Edit & Delete Button to User Vacations */
+.edit-btn, .delete-btn{
+    display: inline-block;
+    padding: 20px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F2B6B6;
+    width: 15%;
+    color: white;
+    font-size: 19px;
+}
+.edit-btn:hover, .delete-btn:hover{
+    font-size: 23px;
+    background-color: #e7b1b1;
+}
+
 /* FOOTER CSS */
 .footer{
     position: fixed;
