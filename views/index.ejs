@@ -49,11 +49,19 @@
 
     <div class='current-vacations'>
             <% for(let i =0; i < newVacations.length; i++) { %>
-                    <img src='<%= newVacations[i].image %>'>
-                    <h3 class="vacation-location" > <%= newVacations[i].location%></h4>
-                    <p class='vacation-budget'>$<%= newVacations[i].budget %> </p>    
-                    <p class='vacation-days'><%= newVacations[i].days %> Days</p> 
-                    <a class='edit-a-tag'>Edit</a>  
+                    <img class='vacation-image' src='<%= newVacations[i].image %>'>
+                    <div class='vacation-info-div'>
+                        <h3 class="vacation-location" > <%= newVacations[i].location%></h4>
+                        <p class='vacation-budget'>$<%= newVacations[i].budget %> </p>    
+                        <p class='vacation-days'><%= newVacations[i].days %> Days</p> 
+                    </div>
+                    <a class='edit-a-tag' href='/<%= newVacations[i] %>/edit'>Edit</a>  
+                    <div class='delete-div'>
+                        <form action="/<%= newVacations[i].id %>?_method=DELETE" method="POST">
+            
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                     </div>
                 <% } %>
     </div>
 

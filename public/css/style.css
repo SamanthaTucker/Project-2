@@ -147,7 +147,18 @@ input {
 .next-button{
    padding: 10px;
 }
-
+.current-vacations{
+    margin: 30px;
+}
+.vacation-info-div{
+    margin: 20px;
+}
+.vacation-info-div h3{
+    font-size: 30px;
+}
+.vacation-image{
+    width: 300px;
+}
 /* FOOTER CSS */
 .footer{
     position: fixed;

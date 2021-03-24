@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<title>Vacation Planner New</title>
+</head>
+<body>
+    
+    <div class='header-img-div-new'>
+        <div class="h2-div">
+            <h2 class='h2-title'>Dérive: <br> <small>(Origin: french)</small> <br><br>A spontaneous and unplanned journey where the traveller is guided by the landscape and architechture</h2>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <ul class='ul-nav'>
+            <li>
+                <a class='navbar-links' href="/planner">Home</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Locations</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Budgeting</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Day Schedules</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Travel-Notes</a>
+            </li>
+        </ul>
+      </div>
+
+
+      <h3 class='new-main-h3'>Edit This Vacation:</h3>
+
+      <form id="new-vacation-form" action='/planner' method='POST'>
+        <div class='tabs'>Photo:
+            <p><input type='text' name='image' placeholder="Image URL"></p>
+        </div>
+        <div class='tabs'>Location:
+            <p><input type="text" name='location'  placeholder="Destination..."></p>
+        </div>
+        <div class='tabs'>Budget Amount:
+            <p><input type="text" name='budget' placeholder="Overall amount for now..."></p>
+        </div>
+        <div class='tabs'>How Many Days:
+            <p><input type='number' name='days' placeholder="Number of Days"></p>
+        </div>
+
+         <div class='next-div'>
+            <button class='next-button' type="submit" value='submit'>Create Vacation</button>
+         </div>
+      </form>
+
+      
+      <footer>
+        <ul class="footer-ul">
+            <li>Made in Denver CO &hearts;</li>
+            <li>&#169;2021 Vacation Planner</li>
+            <li>Contact Me!</li>
+        </ul>
+    </footer>
+</body>
+</html>

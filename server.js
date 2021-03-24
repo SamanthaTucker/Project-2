@@ -76,12 +76,31 @@ app.get('/planner/new', (req,res)=>{
     res.render('new.ejs')
 })
 
-//Edit Route
-app.get('/planner/edit', (req,res)=>{
-    console.log('Edit Route is working')
+// Delete Route:
+app.delete('/:id', (req,res)=>{
+    Vacation.findByIdAndRemove(req.params.id, (err, createdVacation)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log(createdVacation)
+            res.redirect('/planner')
+        }
+    })
 })
 
-//POST Route
+//Edit Route
+app.get('/:id/edit', (req,res)=>{
+    console.log('Edit Route is working')
+    Vacation.findById(req.params.id, (err, createdVacation)=>{
+        res.render('edit.ejs', {
+            newVacations: createdVacation
+        })
+    })
+})
+
+//POST Route 
+//User created vacation planner here:
 app.post('/planner', (req, res)=>{
     console.log('Post is working planner/new ')
     //console.log(req.body) // So it is taking input
