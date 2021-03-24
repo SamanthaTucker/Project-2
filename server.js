@@ -41,21 +41,40 @@ app.use(express.static('public'))
 // Parse the Data / Creates the req.body:
 app.use(express.urlencoded({extended: true}));
 
+
+//Middleware for Sessions:
+app.use(session({
+    secret: process.env.SECRET ,
+    resave: false ,
+    saveUninitialized: false
+}))
+
+
+
 //Models:
 
 const Vacation = require('./models/vacation')
-//my destinations/ Locations to be entered
 
-// const budgetSchema = require('./models/budget')
-// // Budget for vacations to be entered
+// Controllers:
 
-// const scheduleSchema = require('./models/schedule')
-// //Day schedule to be entered
+//for every request starting with '/planner' look on planner Controller
+const plannerController = ('./controllers/planner')
 
-// const notesSchema = require('./models/notes')
-// //Travel notes to be entered
+
+const sessionsController = require('./controllers/sessions')
+
+
 
 //ROUTES:
+
+//Homepage Route:
+app.get('/', (req,res)=>{
+    res.render('home.ejs', {
+        currentUser: req.sessions.currentUser
+    })
+})
+
+
 
 // Index route
 app.get('/planner', (req, res)=>{
