@@ -5,6 +5,7 @@ const {Schema, model} = mongoose
 const vacationSchema = new Schema({
     image: {type: String},
     location: {type: String, required: true}, 
+    dates: {type: String},
     budget: {type: Number, required: true},
     days: {type: Number, required: true}
 })

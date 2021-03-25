@@ -47,13 +47,18 @@
         <button class='start' onclick="window.location.href='planner/new'"> Start Planning</button>
     </div>
 
+    <div class='upcoming-vacay'>
+        <h3>Upcoming Vacations:</h3>
+    </div>
+
     <div class='current-vacations'>
 
             <% for(let i =0; i < newVacations.length; i++) { %>
                     <img class='vacation-image' src='<%= newVacations[i].image %>' width='550px'>
 
                     <div class='vacation-info-div'>
-                        <h3 class="vacation-location" > <%= newVacations[i].location%></h4>
+                        <h3 class="vacation-location" > <%= newVacations[i].location%></h3>
+                        <h4 class='dates'><%= newVacations[i].dates %></h4>
                         <p class='vacation-budget'>Budget: $<%= newVacations[i].budget %> </p>    
                         <p class='vacation-days'>Staying for <%= newVacations[i].days %> Days</p> 
                     </div>

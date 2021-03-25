@@ -127,6 +127,13 @@ body{
     cursor: pointer;
 }
 
+.upcoming-vacay{
+    padding-left: 20px;
+    font-size: 25px;
+}
+.dates{
+    font-size: 25px;
+}
 .new-main-h3{
     font-size: 35px;
     margin: 50px;
@@ -160,6 +167,7 @@ input {
 .current-vacations{
     margin: 30px;
     text-align: center;
+    /* border: 2px solid rgba(0, 0, 0, 0.3); */
 }
 .vacation-info-div{
     margin: 10px;
@@ -180,13 +188,13 @@ input {
 /* Edit & Delete Button to User Vacations */
 .edit-btn, .delete-btn{
     display: inline-block;
-    padding: 20px 15px;
+    padding: 15px 15px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     margin: 0 10px 10px 0;
     text-decoration: none;
     text-align: center;
     background-color: #F2B6B6;
-    width: 15%;
+    width: 12%;
     color: white;
     font-size: 19px;
 }

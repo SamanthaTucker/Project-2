@@ -15,12 +15,11 @@ const methodOverride = require('method-override')
 
 app.use(methodOverride('_method'))
 
-app.use(express.json())
+// app.use(express.json())
 
 
 //Database
 const mongoURI = process.env.MONGODBURI
-
 const db = mongoose.connection
 
 mongoose.connect(mongoURI, {
@@ -35,12 +34,17 @@ db.on('error', (err)=> { console.log('ERROR: ', err)})
 db.on('connected', ()=> { console.log("MONGO Connected")})
 db.on('disconnected', ()=> { console.log("MONGO Disconnected")})
 
+
 //CSS 
 app.use(express.static('public'))
 
 // Parse the Data / Creates the req.body:
 app.use(express.urlencoded({extended: true}));
 
+
+app.use((req, res, next)=>{
+    next()
+})
 
 //Middleware for Sessions:
 app.use(session({
