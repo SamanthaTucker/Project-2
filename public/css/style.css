@@ -30,6 +30,13 @@ body{
     min-width: 100%;
     min-height: 450px;
 }
+.header-img-div-locations{
+    background: url("https://worldofwanderlust.com/wp-content/uploads/2014/09/IMG_0167.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 450px;
+}
 
 /* QUOTES ON HEADER IMAGES */
 .h2-div{
@@ -202,6 +209,45 @@ input {
     font-size: 23px;
     background-color: #e7b1b1;
 }
+
+/* Location Route CSS */
+.disney-div{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.disney-img{
+    width: 450px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.locations-blog h3{
+    font-size: 40px;
+    margin: 20px;
+    padding-top: 40px;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+.locations-blog h4{
+    font-size: 35px;
+    text-align: center;
+    margin: 20px;
+}
+.p-div{
+    margin: 40px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER CSS */
 .footer{

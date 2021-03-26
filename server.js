@@ -140,6 +140,13 @@ app.post('/planner', (req, res)=>{
     })
 })
 
+// Locations route
+app.get('/locations', (req,res)=>{
+    console.log('Locations route working')
+    res.render('locations.ejs')
+})
+
+
 
 app.listen(PORT, ()=>{
     console.log("Server is Listening!! :)")
