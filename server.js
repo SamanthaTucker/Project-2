@@ -141,9 +141,9 @@ app.post('/planner', (req, res)=>{
 })
 
 // Locations route
-app.get('/locations', (req,res)=>{
-    console.log('Locations route working')
-    res.render('locations.ejs')
+app.get('/tips', (req,res)=>{
+    console.log('Tips route is working')
+    res.render('tips.ejs')
 })
 
 
