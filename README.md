@@ -49,3 +49,9 @@ Destroy | /planner/:id | DELETE |
 **Home Page After Login/ Create Account:**
 
 ![Image of Home Page After Login](https://i.imgur.com/ThAN6pr.png)
+
+## Stretch Goals/ Upcoming Features: ##
+
+- Users will be able to create username and passwords. Users will have their created vacations saved to their profiles, and will be able to view them once logging in.
+- Ability to add User personal travel notes and tips
+- Updated nav links/ Hamburger menu 
