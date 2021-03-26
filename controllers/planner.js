@@ -1,7 +1,6 @@
 const express = require('express')
 const Vacation = require('../models/vacation')
 const router = express.Router()
-const Vaction = require('../models/vaction')
 
 
 //Index route for vacation , list the vacations made:

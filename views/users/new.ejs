@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New User</title>
+    <%- include('./partials/header.ejs') %>
+    <title>Vacation Planner Index</title>
 </head>
 <body>
+
+    <div class='header-img-div'>
+        <!-- <img class='header-img' src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2017/08/pexels-photo-297755-840x549.jpeg?v=22826"> -->
+        
+        <div class="h2-div">
+            <h2 class='h2-title'>Solivagant: <br> (oriin: Latin) An adventurer who travels or wanders the globe alone</h2>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <ul class='ul-nav'>
+            <li>
+                <a class='navbar-links' href="/planner">Home</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Locations</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Budgeting</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Day Schedules</a>
+            </li>
+            <li>
+                <a class='navbar-links' href="">Travel-Notes</a>
+            </li>
+        </ul>
+      </div>
     
     <h3>New User</h3>
 
     <form action='/users' method='POST'>
 
-       <div>Username:
-           <p><input type="text" name='username'/></p>
+       <div class='tabs'>Username:
+           <p><input type="text" name='username' placeholder='Username'/></p>
        </div>
 
-       <div>Password:
-           <p><input type='text' name='password'/></p>
+       <div class='tabs'>Password:
+           <p><input type='text' name='password' placeholder='Password'/></p>
        </div>
 
        <br>
@@ -28,10 +52,14 @@
 
     </form>
 
+    <footer>
+        <ul class="footer-ul">
+            <li>Made in Denver CO &hearts;</li>
+            <li>&#169;2021 Vacation Planner</li>
+            <li>Contact Me!</li>
+        </ul>
+    </footer>
+
+
 </body>
 </html>
-
-
-<div class='tabs'>Photo:
-    <p><input type='text' name='image' placeholder="Image URL"></p>
-</div>

@@ -3,9 +3,10 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT
+
 const bodyParser = require('body-parser')
 const session = require('express-session')
-
+const router = express.Router()
 
 //Set Up Database
 const mongoose = require('mongoose')
@@ -15,7 +16,7 @@ const methodOverride = require('method-override')
 
 app.use(methodOverride('_method'))
 
-// app.use(express.json())
+//app.use(express.json())
 
 
 //Database
@@ -35,16 +36,16 @@ db.on('connected', ()=> { console.log("MONGO Connected")})
 db.on('disconnected', ()=> { console.log("MONGO Disconnected")})
 
 
+app.use((req, res, next)=>{
+    next()
+})
+
 //CSS 
 app.use(express.static('public'))
 
 // Parse the Data / Creates the req.body:
 app.use(express.urlencoded({extended: true}));
 
-
-app.use((req, res, next)=>{
-    next()
-})
 
 //Middleware for Sessions:
 app.use(session({
@@ -63,10 +64,11 @@ const Vacation = require('./models/vacation')
 
 //for every request starting with '/planner' look on planner Controller
 const plannerController = ('./controllers/planner')
+//app.use('/planner', plannerController)
 
 
 const sessionsController = require('./controllers/sessions')
-
+app.use('/sessions', sessionsController)
 
 
 //ROUTES:
@@ -79,8 +81,7 @@ app.get('/', (req,res)=>{
 })
 
 
-
-// Index route
+//Index route
 app.get('/planner', (req, res)=>{
     console.log('Index Route is working')
     Vacation.find({}, (err, createdVacation)=>{
