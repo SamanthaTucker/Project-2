@@ -56,4 +56,5 @@ Destroy | /planner/:id | DELETE | Ability to delete user vacations
 - Ability to add User personal travel notes and tips
 - Updated nav links/ Hamburger menu 
 - Updated nav link Travel-notes: Users will be able to input notes and tips to their created vacations/ input their experience in a blog like post in their account
+- User will have a countdown display to show how many days are left until their dates of vacation
 
