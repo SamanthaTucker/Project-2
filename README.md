@@ -31,10 +31,10 @@ Route Name | URL | HTTP Verb | Description
 Index | /planner | GET | Main home page user will see after logging in/ creating an account
 New | /planner/new | GET | New: will be adding locations, budget, travel notes, and day schedules.
 Create | /planner | POST | User can create a new vacation with basic Location, Budget, Number of days, to show up on index route.
-Show | /planner/:id | GET |
-Edit | /planner/:id/edit | GET |
-Update | /planner/:id | PUT |
-Destroy | /planner/:id | DELETE |
+Show | /planner/:id | GET | View each created vacation
+Edit | /planner/:id/edit | GET | Ability to edit user input/vacations
+Update | /planner/:id | PUT | Create the vacations and push them to the Schema, and show them on the index route
+Destroy | /planner/:id | DELETE | Ability to delete user vacations
 
 ## Wireframe 
 
@@ -55,3 +55,5 @@ Destroy | /planner/:id | DELETE |
 - Users will be able to create username and passwords. Users will have their created vacations saved to their profiles, and will be able to view them once logging in.
 - Ability to add User personal travel notes and tips
 - Updated nav links/ Hamburger menu 
+- Updated nav link Travel-notes: Users will be able to input notes and tips to their created vacations/ input their experience in a blog like post in their account
+
