@@ -55,3 +55,5 @@ Destroy | /planner/:id | DELETE |
 - Users will be able to create username and passwords. Users will have their created vacations saved to their profiles, and will be able to view them once logging in.
 - Ability to add User personal travel notes and tips
 - Updated nav links/ Hamburger menu 
+- Updated nav link Travel-notes: Users will be able to input notes and tips to their created vacations/ input their experience in a blog like post in their account
+
